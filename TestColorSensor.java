@@ -26,6 +26,7 @@ public class TestColorSensor extends LinearOpMode {
         leftFront = hardwareMap.get(DcMotor.class, "front_left");
         leftBack = hardwareMap.get(DcMotor.class, "back_left");
         rightBack = hardwareMap.get(DcMotor.class, "back_right");
+        //add claw/linear slide hardware map here
  
         // While the Op Mode is running, update the telemetry values.
         while (opModeIsActive()) {
@@ -36,6 +37,8 @@ public class TestColorSensor extends LinearOpMode {
          if (color.red()>color.blue()) {
             strafeLeft(1000);
             sleep(1000);
+          //basically if you add an else statement here it should behave as if it were detecting blue
+          //add claw/linear slide stuff here
         }           
         }
         rightFront.setDirection(DcMotorSimple.Direction.REVERSE);
